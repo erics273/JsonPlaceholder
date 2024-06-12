@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the old todo</title>
+</head>
+<body>
+    
+    <!-- form to update a comment -->
+    <div>
+        <h1>Update Todo Form</h1>
+
+        <button id="cancelButton">Cancel Edit</button>
+
+        <h3>What ToDo do you want to edit?</h3>
+        <!-- form to get the comment to edit -->
+        <div>
+            <form id="getTodoToEdit">
+                <div>
+                    <label for="todoId">ToDo ID:</label>
+                    <input type="text" id="todoId" name="todoId" value="" required>
+                    <button>Get ToDo To Update</button>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <form id="updateTodoForm">
+            <!-- create hidden field so we have access to the ID of the record we want to update -->
+            <input type="hidden" name="id" id="id" value="">
+            <div>
+                <label for="userId">User ID:</label>
+                <input type="text" name="userId" id="userId" value="">
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="">
+            </div>
+            <div>
+                <label for="completed">Completed:</label>
+                <input type="text" name="completed" id="completed" value="">
+            </div>
+            <button>Update Todo</button>
+        </form>
+    </div>
+
+    <script src="./scripts/edit-todo.js"></script>
+</body>
+</html>
